@@ -7,10 +7,7 @@ let
 
   yamlFormat = pkgs.formats.yaml { };
 
-  configDir = if pkgs.stdenv.isDarwin then
-    "Library/Application Support"
-  else
-    config.xdg.configHome;
+  configDir = config.xdg.configHome;
 
 in {
   meta.maintainers = [ ];
